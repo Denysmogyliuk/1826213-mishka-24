@@ -13,7 +13,9 @@
         alt="Логотип Mishka.">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню.</span></button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Меню.</span>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -27,12 +29,12 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link main-nav__link--search" href="#">
               Поиск по сайту
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link main-nav__link--bucket" href="#">
               Корзина: пока пуста
             </a>
           </li>
@@ -85,12 +87,12 @@
     <section class="features">
       <h2 class="features__header">Коротко о нас:</h2>
       <ul class="features__list">
-        <li class="features__item">Экологически сичтые материалы</li>
-        <li class="features__item">Скандинавский стиль по российской цене</li>
-        <li class="features__item">Увеличивает лайки на фотографиях</li>
-        <li class="features__item">Связано вручную с любовью и умилением</li>
-        <li class="features__item">Поддержка отечественного производителя</li>
-        <li class="features__item">Поставляется в подарочной упаковке</li>
+        <li class="features__item features__item--ecology">Экологически чистые материалы</li>
+        <li class="features__item features__item--price">Скандинавский стиль по российской цене</li>
+        <li class="features__item features__item--likes">Увеличивает лайки на фотографиях</li>
+        <li class="features__item features__item--sweet">Связано вручную с любовью и умилением</li>
+        <li class="features__item features__item--patriot">Поддержка отечественного производителя</li>
+        <li class="features__item features__item--pack">Поставляется в подарочной упаковке</li>
       </ul>
     </section>
     <section class="recalls">
@@ -177,6 +179,7 @@
       </ul>
     </section>
     <section class="copyright">
+      <h3 class="visually-hidden">Копирайт.</h3>
       <p class="copyright__description">Разработано</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg class="copyright__link-image" role="img" width="27" height="34" aria-label="Логотип HTML Academy."
