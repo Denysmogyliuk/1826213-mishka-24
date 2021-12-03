@@ -1,0 +1,66 @@
+.form__header {
+  .h1-header;
+}
+
+.form-field {
+  &--color,
+  &--email,
+  &--phone {
+    background-color: @grey;
+  }
+}
+
+.form__description {
+  font-size: 13px;
+  line-height: 24px;
+  color: @semi-black;
+}
+
+.form-field__title {
+  font-size: 17px;
+  line-height: 16px;
+  color: @lightgreen;
+  text-transform: uppercase;
+}
+
+.form-field__label {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.form-field__input {
+  padding: 8px;
+  font-size: 19px;
+  line-height: 18px;
+  outline: none;
+  color: @semi-black;
+  border: none;
+  border-bottom: 2px solid @black;
+
+  &::placeholder {
+    color: #9974744d;
+  }
+
+  &--number,
+  &--email {
+    background-color: @grey;
+  }
+}
+
+.form-field__textarea {
+  padding: 8px;
+  font-size: 19px;
+  line-height: 18px;
+  outline: none;
+  color: @semi-black;
+  border: 2px solid @black;
+
+  &::placeholder {
+    color: #9974744d;
+  }
+}
+
+.order-form__submit {
+  .button;
+}
