@@ -1,12 +1,29 @@
+.categories {
+  @media (min-width: @tablet-width) {
+    margin-top: -145px;
+    margin-bottom: 40px;
+  }
+}
+
 .categories__list {
+  display: flex;
+  flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-inner-width;
+  }
 }
 
 .categories__item {
-  .link;
-
   &--interior {
     background-color: @lightgreen;
   }
@@ -18,7 +35,19 @@
 
 .categories__link {
   .link;
+  position: relative;
+  display: block;
+  text-align: left;
+  padding: 28px 120px 28px 30px;
   color: @white;
   font-size: 19px;
   line-height: 24px;
+  font-weight: 700;
+}
+
+.categories__link-logo {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
 }

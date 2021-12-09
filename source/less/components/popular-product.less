@@ -1,6 +1,81 @@
-.popular-product__header-link {
-  .h2-header;
-  .link;
+.popular-product {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    grid-gap: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 0.3fr 0.7fr 1fr;
+    width: @desktop-inner-width;
+  }
+}
+
+.popular-product__header {
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    font-size: 53px;
+    line-height: 57px;
+    font-weight: 700;
+  }
+}
+
+.popular-product__photo {
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3/4;
+    grid-row: 1/4;
+  }
+}
+
+
+.popular-product__header-addition-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+.popular-product__description-wrapper {
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+.popular-product__price-button-wrapper {
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
 }
 
 .popular-product__addition {
@@ -8,12 +83,20 @@
   line-height: 20px;
   color: @lightgreen;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 70px;
+    left: -100px;
+    top: 8px;
+  }
 }
 
 .popular-product__description {
   font-size: 15px;
   line-height: 24px;
   color: @semi-black;
+  width: 80%;
 }
 
 .popular-product__cell {
@@ -28,8 +111,6 @@
   font-weight: 700;
 }
 
-.popular-product__order-link {
-  .link;
+.popular-product__order-button {
   .button;
-  text-align: center;
 }
