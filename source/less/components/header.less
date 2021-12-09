@@ -16,7 +16,7 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    width: @tablet-inner-width;
+    width: 90%;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -103,6 +103,9 @@
 
 .main-nav__search-icon {
   position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
 
   @media (min-width: @tablet-width) {
     transform: translateY(30%);
@@ -142,9 +145,13 @@
 
 .main-nav__link--search {
   @media (min-width: @tablet-width) {
-    font-size: 0;
     width: 20px;
     position: relative;
+
+    & span {
+      position: absolute;
+      opacity: 0;
+    }
   }
 }
 
