@@ -1,5 +1,46 @@
+.feedback {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/feedback.jpg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-inner-width;
+  }
+}
+
+.feedback__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-inner-width;
+    min-height: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 875px;
+  }
+}
+
 .feedback__header {
   .h2-header;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 82px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+  }
 }
 
 .feedback__blockquote {
@@ -10,17 +51,36 @@
   font-size: 15px;
   line-height: 30px;
   color: @semi-black;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-inner-width - 100;
+    margin-bottom: 61px;
+  }
 }
 
 .feedback__author {
+  display: flex;
+  flex-direction: column;
   font-size: 17px;
   font-style: normal;
   line-height: 30px;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .feedback__nickname {
   font-weight: 400;
+}
+
+.feedback__nav-button-wrapper {
+  display: flex;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+  }
 }
 
 .feedback__button {
@@ -32,8 +92,19 @@
   &:hover .feedback__button-logo {
     opacity: 60%;
   }
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .feedback__write-button {
   .button;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
 }
