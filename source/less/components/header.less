@@ -217,3 +217,15 @@
 .page-header__title-wrapper--index {
   min-height: 300px;
 }
+
+.main-nav--closed {
+  @media (max-width: @mobile-width-only) {
+    & .main-nav__list {
+      display: none;
+    }
+
+    & .main-nav__user-list {
+      display: none;
+    }
+  }
+}
