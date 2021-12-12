@@ -1,9 +1,14 @@
-.form__description {
+.form__description-container {
+  display: flex;
   width: 84%;
-  font-size: 13px;
-  line-height: 24px;
-  color: @semi-black;
+  max-width: @desktop-inner-width;
   margin: 0 auto;
+}
+
+.form__description {
+  @media (min-width: @desktop-width) {
+    margin-left: 20%;
+  }
 }
 
 .form {
@@ -28,6 +33,7 @@
   grid-column: 1fr 2fr;
   border: none;
   width: 84%;
+  max-width: @desktop-inner-width;
   margin: 0 auto;
 }
 
@@ -126,6 +132,7 @@
   margin: 0 auto;
   padding: 0;
   width: 84%;
+  max-width: @desktop-inner-width;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
@@ -162,6 +169,7 @@
 
 .form__textarea-wrapper {
   width: 84%;
+  max-width: @desktop-inner-width;
   margin: 40px auto;
   display: flex;
   flex-direction: column;
