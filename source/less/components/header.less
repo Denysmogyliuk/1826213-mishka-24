@@ -6,7 +6,7 @@
   background-image: url("../img/index-header-image.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 0 60px;
+  background-position: 0 79px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
@@ -47,7 +47,10 @@
 }
 
 .page-header__logo {
+  display: flex;
+  align-items: center;
   align-self: center;
+  min-height: 79px;
 
   @media (min-width: @desktop-width) {
     grid-column: 2/3;
@@ -126,6 +129,18 @@
   }
 }
 
+.main-nav__item {
+  @media (min-width: @desktop-width) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      border-right: 1px solid @grey;
+    }
+  }
+}
+
 .main-nav__link {
   display: block;
   .link;
@@ -134,14 +149,16 @@
   line-height: 24px;
   font-weight: 700;
   padding: 20px 60px;
-  border-bottom: 1px solid @grey;
+
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @grey;
+  }
 
   &:hover {
     opacity: 60%;
   }
 
   @media (min-width: @tablet-width) {
-    border: none;
     font-size: 15px;
     padding: 12px;
 
@@ -162,7 +179,8 @@
   transform: translateY(-50%);
 
   @media (min-width: @tablet-width) {
-    transform: translateY(30%);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -186,25 +204,40 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
     justify-content: space-between;
     grid-column: 2/3;
     grid-row: 1/2;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
     grid-column: 3/4;
+  }
+}
+
+.main-nav__user-item {
+  @media (min-width: @tablet-width) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      border-left: 1px solid @grey;
+      border-right: 1px solid @grey;
+    }
   }
 }
 
 .main-nav__link--search {
   @media (min-width: @tablet-width) {
-    width: 20px;
+    display: block;
+    box-sizing: border-box;
+    width: 82px;
     position: relative;
 
     & span {
-      position: absolute;
-      opacity: 0;
+      .visually-hidden;
     }
   }
 }
