@@ -19,10 +19,11 @@
 }
 
 .page-header__title-wrapper {
+  display: flex;
+  flex-direction: column;
+
   &--index {
     min-height: 300px;
-    display: flex;
-    flex-direction: column;
 
     @media (min-width: @tablet-width) {
       min-height: 800px;
@@ -32,8 +33,6 @@
   &--form,
   &--catalog {
     min-height: 250px;
-    display: flex;
-    flex-direction: column;
 
     @media (min-width: @tablet-width) {
       min-height: 300px;
@@ -41,34 +40,22 @@
   }
 }
 
-.page-header__title--index,
-.page-header__title--catalog,
-.page-header__title--form {
-  .h1-header;
+.page-header__title {
+  .h1-header-mobile;
   display: block;
   width: 70%;
   margin: 0 auto;
-  padding-top: 120px;
   text-align: center;
+  margin-top: 150px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 200px;
+    .h1-header-tablet;
+    margin-top: 100px;
     width: 50%;
   }
-}
 
-.page-header__title--catalog,
-.page-header__title--form {
-  .h1-header;
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-  padding-top: 140px;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 50px;
-    width: 50%;
+  @media (min-width: @desktop-width) {
+    .h1-header-desktop;
   }
 }
 
@@ -87,7 +74,7 @@
     display: grid;
     width: 84%;
     grid-template-columns: 1fr 1.2fr;
-    grid-template-rows: minmax(88px, 1fr);
+    grid-template-rows: minmax(88px, min-content) minmax(40px, min-content);
   }
 
   @media (min-width: @desktop-width) {
@@ -320,6 +307,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     grid-column: 2/3;
     grid-row: 2/3;
   }

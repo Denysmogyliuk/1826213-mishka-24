@@ -28,13 +28,12 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 20px 0;
-  width: 260px;
+  width: 84%;
   margin: 0 auto;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 2fr 1fr 2fr;
-    width: @tablet-inner-width;
     margin: 0 auto;
     margin-bottom: 40px;
   }
@@ -48,10 +47,11 @@
 }
 
 .contacts__email {
+  justify-self: flex-start;
   text-decoration: none;
   color: inherit;
-  border-bottom: 1px solid @contacts-email-border;
   align-self: flex-start;
+  border-bottom: 1px solid @green;
 }
 
 .contacts__mail-name {
