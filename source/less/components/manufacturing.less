@@ -16,7 +16,9 @@
 }
 
 .manufacturing__header {
-  .h3-header-mobile;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
   margin-left: 90px;
   margin-bottom: 27px;
 
@@ -75,9 +77,26 @@
 }
 
 .manufacturing__link {
-  .link;
-  .button;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
   margin: 0 auto;
+  background-color: @white;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: 0;
+  border: 2px solid @semi-black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @semi-black;
+    color: @white;
+  }
+
 
   @media (max-width: @mobile-width-only) {
     width: 80%;

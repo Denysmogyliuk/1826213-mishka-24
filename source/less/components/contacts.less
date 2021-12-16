@@ -12,7 +12,9 @@
 }
 
 .contacts__header {
-  .h2-header;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
   width: 260px;
   margin: 0 auto;
   margin-top: 38px;
@@ -67,9 +69,24 @@
 }
 
 .contacts__button {
-  .button;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  background-color: @white;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: 0;
+  border: 2px solid @semi-black;
+  cursor: pointer;
   width: 260px;
   margin: 0 auto;
+
+  &:hover {
+    background-color: @semi-black;
+    color: @white;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column: 1/3;

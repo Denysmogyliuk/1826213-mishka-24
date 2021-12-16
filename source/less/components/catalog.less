@@ -26,7 +26,6 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
   }
 }
@@ -38,12 +37,16 @@
 }
 
 .catalog__product-header {
-  .h3-header-mobile;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
   margin-bottom: 6px;
 }
 
 .catalog__link {
-  .link;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .catalog__product-description {

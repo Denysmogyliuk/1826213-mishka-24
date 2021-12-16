@@ -301,7 +301,22 @@
 }
 
 .order-form__submit {
-  .button;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  background-color: @white;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: 0;
+  border: 2px solid @semi-black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @semi-black;
+    color: @white;
+  }
 }
 
 .form__button-mark-wrapper {
