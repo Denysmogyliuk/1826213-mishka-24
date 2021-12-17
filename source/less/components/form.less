@@ -1,34 +1,217 @@
-.form__header {
-  .h1-header;
+.form__description-container {
+  display: flex;
+  width: 84%;
+  max-width: @desktop-inner-width;
+  margin: 0 auto;
 }
 
-.form-field {
-  border: none;
+.form__description {
+  @media (min-width: @desktop-width) {
+    margin-left: 20%;
+  }
+}
 
-  &--color,
-  &--email,
-  &--phone {
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form-field__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field__wrapper:nth-child(2n) {
+  @media (min-width: @tablet-width) {
     background-color: @grey;
   }
 }
 
-.form__description {
-  font-size: 13px;
-  line-height: 24px;
-  color: @semi-black;
+.form-field {
+  display: grid;
+  grid-column: 1fr 2fr;
+  border: none;
+  width: 84%;
+  max-width: @desktop-inner-width;
+  margin: 0 auto;
+}
+
+.form-field__filter-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20%;
+  }
+}
+
+.form-field__filter-item {
+  margin-bottom: 20px;
+}
+
+.form-field__filter-list--color {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form-field__user-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20%;
+  }
+}
+
+.form-field__user-item {
+  margin-bottom: 30px;
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  display: flex;
+  width: 100%;
 }
 
 .form-field__title {
+  display: block;
   font-size: 17px;
   line-height: 16px;
   color: @lightgreen;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
 }
 
 .form-field__label {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+}
+
+.form-field__control-label {
+  padding-left: 70px;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
+}
+
+.form-field__control-input[type="checkbox"] + .form-field__control-mark {
+  position: absolute;
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+  border: 2px solid @semi-black;
+  background-color: @white;
+
+  @media (max-width: @mobile-width-only) {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.form-field__control-input[type="radio"] + .form-field__control-mark {
+  position: absolute;
+  box-sizing: border-box;
+  width: 52px;
+  height: 52px;
+  border: 2px solid @semi-black;
+  background-color: @white;
+  border-radius: 50%;
+
+  @media (max-width: @mobile-width-only) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-field__control-input[type="checkbox"]:hover + .form-field__control-mark,
+.form-field__control-input[type="radio"]:hover + .form-field__control-mark {
+  border-color: @green;
+}
+
+.form-field__control-input[type="checkbox"]:active + .form-field__control-mark,
+.form-field__control-input[type="checkbox"]:focus + .form-field__control-mark,
+.form-field__control-input[type="radio"]:active + .form-field__control-mark,
+.form-field__control-input[type="radio"]:focus + .form-field__control-mark {
+  border-color: @lightgreen;
+}
+
+.form-field__control-input[type="radio"]:checked + .form-field__control-mark {
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 13px;
+    left: 13px;
+    height: 23px;
+    width: 23px;
+    background-color: @green;
+
+    @media (max-width: @mobile-width-only) {
+      top: 10px;
+      left: 10px;
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+.form-field__control-input[type="checkbox"]:checked + .form-field__control-mark {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 6px;
+    width: 16px;
+    height: 2px;
+    background-color: @black;
+    transform: rotate(45deg);
+
+    @media (max-width: @mobile-width-only) {
+      top: 22px;
+      left: 7px;
+      width: 10px;
+      height: 1px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 14px;
+    width: 32px;
+    height: 2px;
+    background-color: @black;
+    transform: rotate(-45deg);
+
+    @media (max-width: @mobile-width-only) {
+      top: 18px;
+      left: 12px;
+      width: 20px;
+      height: 1px;
+    }
+  }
 }
 
 .form-field__input {
@@ -39,15 +222,63 @@
   color: @semi-black;
   border: none;
   border-bottom: 2px solid @black;
+  flex-grow: 1;
+  background-color: transparent;
 
   &::placeholder {
     color: @form-placeholder;
   }
+}
 
-  &--number,
-  &--email {
-    background-color: @grey;
+.form-field__contacts-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 84%;
+  max-width: @desktop-inner-width;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
   }
+}
+
+.form-field__contacts-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+
+  @media (max-width: @mobile-width-only) {
+    flex-direction: column;
+  }
+}
+
+.form-field__input--contacts {
+  @media (min-width: @tablet-width) {
+    margin-left: 20%;
+  }
+}
+
+.form-field__title--contacts {
+  @media (min-width: @tablet-width) {
+    align-self: center;
+  }
+}
+
+.form-field__icon {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.form__textarea-wrapper {
+  width: 84%;
+  max-width: @desktop-inner-width;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-field__textarea {
@@ -57,12 +288,49 @@
   outline: none;
   color: @semi-black;
   border: 2px solid @black;
+  box-sizing: border-box;
+  margin-bottom: 30px;
 
   &::placeholder {
     color: @form-placeholder;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20%;
+  }
 }
 
 .order-form__submit {
-  .button;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  background-color: @white;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  outline: 0;
+  border: 2px solid @semi-black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @semi-black;
+    color: @white;
+  }
+}
+
+.form__button-mark-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 20%;
+  }
 }
