@@ -12,17 +12,50 @@
 }
 
 .contacts__header {
+  position: relative;
+  display: block;
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
-  width: 260px;
+  width: 84%;
   margin: 0 auto;
   margin-top: 38px;
   margin-bottom: 28px;
 
+  @media (min-width: @tablet-width) {
+    width: 84%;
+    margin: 0 auto;
+    margin-bottom: 49px;
+    align-items: flex-start;
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: 700;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 81px;
+      right: 0;
+      background-repeat: no-repeat;
+      background-image: url("../img/icons/contacts-flag.svg");
+    }
+  }
+
   @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-top: 80px;
+    margin-left: 25%;
     grid-column: 1/2;
     grid-row: 1/2;
+    font-size: 53px;
+    line-height: 57px;
+    font-weight: 700;
+
+    &::before {
+      left: -80px;
+    }
   }
 }
 
@@ -45,6 +78,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     margin-bottom: 0;
+    margin-left: 25%;
   }
 }
 
@@ -69,7 +103,7 @@
 }
 
 .contacts__button {
-  display: inline-block;
+  display: block;
   text-align: center;
   padding: 14px;
   background-color: @white;
@@ -80,7 +114,7 @@
   outline: 0;
   border: 2px solid @semi-black;
   cursor: pointer;
-  width: 260px;
+  width: 84%;
   margin: 0 auto;
 
   &:hover {
@@ -88,23 +122,35 @@
     color: @white;
   }
 
+  @media (min-width: @tablet-width) {
+    width: 230px;
+  }
+
   @media (min-width: @desktop-width) {
-    grid-column: 1/3;
+    grid-column: 1/2;
+    margin-left: 25%;
+    align-self: flex-end;
   }
 }
 
 .contacts__map {
   width: 100%;
-  margin: 0 auto;
+  height: 454px;
+  margin: 0;
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column: 2/3;
-    grid-row: 1/3;
+    grid-row: 1/4;
+    margin: 0;
   }
 }
 
-.contacts__map-image {
+.contacts__map iframe {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
