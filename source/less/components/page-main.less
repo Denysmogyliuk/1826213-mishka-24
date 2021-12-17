@@ -1,3 +1,53 @@
-.page-main--index {
+.page-main {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-repeat: repeat-x;
+      position: absolute;
+      width: 100%;
+      top: -24px;
+      height: 24px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-repeat: repeat-x;
+      position: absolute;
+      width: 100%;
+      top: -24px;
+      height: 24px;
+    }
+  }
+
+  &--index {
+    @media (min-width: @tablet-width) {
+      &::before {
+        content: "";
+        background-image: url("../img/zigzag-fill-tablet.svg");
+        background-repeat: repeat-x;
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        height: 24px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        background-image: url("../img/zigzag-fill-desktop.svg");
+        background-repeat: repeat-x;
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        height: 24px;
+      }
+    }
+  }
 }
