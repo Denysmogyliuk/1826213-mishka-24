@@ -40,4 +40,3 @@ openDialogButton.addEventListener('click', () => {
     }
   })
 })
-
