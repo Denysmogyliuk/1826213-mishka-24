@@ -1,14 +1,14 @@
 .popular-product {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 81%;
   margin: 0 auto;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    width: 84%;
     grid-gap: 0;
   }
 
@@ -37,6 +37,8 @@
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
     grid-row: 2/4;
+    width: 100%;
+    height: auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -123,9 +125,14 @@
   outline: 0;
   border: 2px solid @semi-black;
   cursor: pointer;
+  width: 292px;
 
   &:hover {
     background-color: @semi-black;
     color: @white;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
   }
 }

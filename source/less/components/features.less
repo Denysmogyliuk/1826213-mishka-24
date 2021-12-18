@@ -4,14 +4,29 @@
   justify-content: start;
   margin: 0 auto;
   margin-bottom: 40px;
-  width: @mobile-inner-width;
-
-  @media (min-width: @tablet-width) {
-    width: @tablet-inner-width;
-  }
 
   @media (min-width: @desktop-width) {
     width: @desktop-inner-width;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 100%;
+    background-image: url("../img/wave-line-mobile.svg");
+    background-repeat: repeat-x;
+
+    @media (min-width: @tablet-width) {
+      height: 17px;
+      background-image: url("../img/wave-line-tablet.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 23px;
+      width: @desktop-inner-width;
+      background-image: url("../img/wave-line-desktop.svg");
+    }
   }
 }
 
