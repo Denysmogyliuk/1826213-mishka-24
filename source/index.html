@@ -355,20 +355,20 @@
   </footer>
 
   <!-- Модальное окно выбора размера -->
-  <dialog class="modal">
+  <dialog class="modal" data-state="closed">
     <h2 class="modal__header">Добавить в корзину</h2>
     <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="modal__form-group">
         <legend class="modal__legend">Выберите размер:</legend>
-        <input class="modal__input" type="radio" name="size" value="S" id="small" checked>
+        <input class="modal__input visually-hidden" type="radio" name="size" value="S" id="small" checked>
         <label class="modal__label" for="small">
           S
         </label>
-        <input class="modal__input" type="radio" name="size" value="M" id="medium">
+        <input class="modal__input visually-hidden" type="radio" name="size" value="M" id="medium">
         <label class="modal__label" for="medium">
           M
         </label>
-        <input class="modal__input" type="radio" name="size" value="L" id="large">
+        <input class="modal__input visually-hidden" type="radio" name="size" value="L" id="large">
         <label class="modal__label" for="large">
           L
         </label>
