@@ -18,7 +18,7 @@ const STATES = {
   CLOSED: "closed"
 };
 
-const openDialogButton = document.querySelector(".popular-product__order-button");
+const openDialogButton = document.querySelector('.popular-product__order-button, .catalog__bucket-button');
 const dialog = document.querySelector('.modal');
 
 openDialogButton.addEventListener('click', () => {

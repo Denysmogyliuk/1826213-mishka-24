@@ -4,20 +4,19 @@
   padding: 29px;
   box-shadow: 0 5px 10px 0 rgba(198, 198, 198, 1);
 
+  &::backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(254, 254, 254, 0.9);
+  }
+
   @media (min-width: @tablet-width) {
     width: 566px;
     min-height: 336px;
   }
-}
-
-
-dialog::backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(254, 254, 254, 0.6);
 }
 
 .modal__header {
