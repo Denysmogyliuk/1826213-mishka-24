@@ -12,9 +12,9 @@
 
   &--form,
   &--catalog {
-    background: linear-gradient(@white 1px, @white 88px, @grey 88px, @grey 600px);
+    background: linear-gradient(@white 1px, @white 88px, @grey 88px, @grey 89px, @lightgrey 89px, @lightgrey 900px);
     background-repeat: no-repeat;
-    margin-bottom: 40px;
+    margin: 0;
   }
 }
 
@@ -23,19 +23,19 @@
   flex-direction: column;
 
   &--index {
-    min-height: 300px;
+    min-height: 256px;
 
     @media (min-width: @tablet-width) {
-      min-height: 800px;
+      min-height: 746px;
     }
   }
 
   &--form,
   &--catalog {
-    min-height: 250px;
+    min-height: 256px;
 
     @media (min-width: @tablet-width) {
-      min-height: 300px;
+      min-height: 226px;
     }
   }
 }
@@ -48,14 +48,14 @@
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 150px;
+  padding-top: 155px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     font-weight: 700;
     line-height: 50px;
-    margin-top: 100px;
     width: 50%;
+    padding-top: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -78,9 +78,9 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    width: 84%;
+    width: 87%;
     grid-template-columns: 1fr 1.2fr;
-    grid-template-rows: minmax(88px, min-content) minmax(40px, min-content);
+    grid-template-rows: minmax(88px, min-content) minmax(70px, min-content);
   }
 
   @media (min-width: @desktop-width) {
@@ -185,19 +185,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    margin-right: 20px;
+    margin-right: 70px;
   }
 }
 
 .main-nav__item {
-  @media (min-width: @desktop-width) {
-    height: 100%;
+  @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 88px;
 
     &:first-child {
-      padding-right: 15px;
+      padding-right: 30px;
       border-right: 1px solid @grey;
     }
   }
@@ -280,7 +283,7 @@
 
 .main-nav__user-item {
   @media (min-width: @tablet-width) {
-    height: 100%;
+    height: 88px;
     display: flex;
     align-items: center;
 
@@ -313,6 +316,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     grid-column: 2/3;

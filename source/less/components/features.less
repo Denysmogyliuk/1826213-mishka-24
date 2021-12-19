@@ -4,14 +4,29 @@
   justify-content: start;
   margin: 0 auto;
   margin-bottom: 40px;
-  width: @mobile-inner-width;
-
-  @media (min-width: @tablet-width) {
-    width: @tablet-inner-width;
-  }
 
   @media (min-width: @desktop-width) {
     width: @desktop-inner-width;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 100%;
+    background-image: url("../img/wave-line-mobile.svg");
+    background-repeat: repeat-x;
+
+    @media (min-width: @tablet-width) {
+      height: 17px;
+      background-image: url("../img/wave-line-tablet.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 23px;
+      width: @desktop-inner-width;
+      background-image: url("../img/wave-line-desktop.svg");
+    }
   }
 }
 
@@ -21,6 +36,18 @@
   line-height: 30px;
   align-self: center;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    width: 87%;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-left: 150px;
+  }
 }
 
 .features__list {
@@ -31,7 +58,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
+    width: 87%;
+    grid-gap: 40px 0;
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-inner-width;
+    }
   }
 }
 
@@ -39,6 +71,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    &:nth-child(2n+1) {
+      margin-left: 150px;
+    }
+  }
 }
 
 .features__description {

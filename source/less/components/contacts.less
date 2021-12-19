@@ -1,13 +1,41 @@
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   margin-bottom: 40px;
+  padding-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 60px;
+  }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: @desktop-inner-width;
+    padding-top: 80px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 100%;
+    top: 0;
+    background-image: url("../img/wave-line-mobile.svg");
+    background-repeat: repeat-x;
+
+    @media (min-width: @tablet-width) {
+      height: 17px;
+      background-image: url("../img/wave-line-tablet.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 23px;
+      width: @desktop-inner-width;
+      background-image: url("../img/wave-line-desktop.svg");
+    }
   }
 }
 

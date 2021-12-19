@@ -15,7 +15,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    width: 87%;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,6 +31,13 @@
   &--toys {
     background-color: @green;
   }
+
+  &:hover {
+    @media (min-width: @tablet-width) {
+      transition: transform 0.2s ease;
+      transform: translateY(-5px);
+    }
+  }
 }
 
 .categories__link {
@@ -38,11 +45,15 @@
   text-decoration: none;
   position: relative;
   text-align: left;
-  padding: 28px 120px 28px 30px;
+  padding: 28px 120px 35px 30px;
   color: @white;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
+
+  &:hover .categories__link-logo {
+    opacity: 0.3;
+  }
 }
 
 .categories__link-logo {
@@ -50,4 +61,5 @@
   right: 40px;
   top: 50%;
   transform: translateY(-50%);
+  fill: @categories-logo;
 }
