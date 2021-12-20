@@ -152,6 +152,11 @@
     color: @white;
   }
 
+  &:active,
+  &:focus {
+    background-color: @semi-black;
+    color: fade(@white, 30%);
+  }
 
   @media (max-width: @mobile-width-only) {
     width: 80%;
