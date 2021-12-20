@@ -12,7 +12,7 @@
 
   &--form,
   &--catalog {
-    background: linear-gradient(@white 1px, @white 88px, @grey 88px, @grey 89px, @lightgrey 89px, @lightgrey 900px);
+    background: linear-gradient(@white 1px, @white 88px, @header-border 88px, @header-border 89px, @grey 89px, @grey 900px);
     background-repeat: no-repeat;
     margin: 0;
   }
@@ -201,7 +201,7 @@
 
     &:first-child {
       padding-right: 30px;
-      border-right: 1px solid @grey;
+      border-right: 1px solid @header-border;
     }
   }
 }
@@ -217,7 +217,7 @@
   padding: 20px 60px;
 
   @media (max-width: @mobile-width-only) {
-    border-bottom: 1px solid @grey;
+    border-bottom: 1px solid @header-border;
   }
 
   &:hover {
@@ -288,8 +288,8 @@
     align-items: center;
 
     &:first-child {
-      border-left: 1px solid @grey;
-      border-right: 1px solid @grey;
+      border-left: 1px solid @header-border;
+      border-right: 1px solid @header-border;
     }
   }
 }
