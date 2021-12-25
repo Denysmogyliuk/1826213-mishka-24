@@ -2,53 +2,32 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    padding-top: 50px;
+
     &::before {
+      z-index: 1;
       content: "";
       background-image: url("../img/zigzag-fill-tablet.svg");
+      background-position: center;
       background-repeat: repeat-x;
       position: absolute;
       width: 100%;
-      top: -24px;
+      top: -23px;
       height: 24px;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::before {
+      z-index: 1;
       content: "";
       background-image: url("../img/zigzag-fill-desktop.svg");
+      background-position: center;
       background-repeat: repeat-x;
       position: absolute;
       width: 100%;
-      top: -24px;
-      height: 24px;
-    }
-  }
-
-  &--index {
-    @media (min-width: @tablet-width) {
-      &::before {
-        z-index: 1;
-        content: "";
-        background-image: url("../img/zigzag-fill-tablet.svg");
-        background-repeat: repeat-x;
-        position: absolute;
-        width: 100%;
-        top: 90px;
-        height: 24px;
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      &::before {
-        content: "";
-        background-image: url("../img/zigzag-fill-desktop.svg");
-        background-repeat: repeat-x;
-        position: absolute;
-        width: 100%;
-        top: 90px;
-        height: 24px;
-      }
+      top: -33px;
+      height: 34px;
     }
   }
 }
