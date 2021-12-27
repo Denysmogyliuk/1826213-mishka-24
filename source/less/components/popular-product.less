@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 81%;
   margin: 0 auto;
-  margin-top: 31px;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
@@ -38,11 +37,16 @@
 }
 
 .popular-product__photo {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+
   @media (min-width: @tablet-width) {
-    grid-column: 2/3;
-    grid-row: 2/4;
     width: 100%;
     height: auto;
+    grid-column: 2/3;
+    grid-row: 2/4;
   }
 
   @media (min-width: @desktop-width) {
@@ -151,7 +155,7 @@
   &:active,
   &:focus {
     background-color: @semi-black;
-    color: fade(@white, 30%);
+    color: @button-active-text;
   }
 
   @media (max-width: @mobile-width-only) {

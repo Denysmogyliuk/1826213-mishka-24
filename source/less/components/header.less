@@ -1,20 +1,18 @@
 .page-header {
-  &--index {
-    background-image: url("../img/index-header-image.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
+  background: linear-gradient(@white 1px, @white 79px, @header-border 79px, @header-border 80px, transparent 80px);
+  background-repeat: no-repeat;
+  background-color: @main-header-background;
+  background-size: 100% 80px;
+  background-position: top center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
-    background-position: 0 88px;
+    background: linear-gradient(@white 1px, @white 88px, @header-border 88px, @header-border 89px, transparent 89px);
+    background-color: @main-header-background;
   }
 
-  &--form,
-  &--catalog {
-    background: linear-gradient(@white 1px, @white 88px, @header-border 88px, @header-border 89px, @grey 89px, @grey 900px);
-    background-repeat: no-repeat;
-    margin: 0;
+  &--catalog,
+  &--form {
+    background-color: @grey;
   }
 }
 
@@ -23,9 +21,36 @@
   flex-direction: column;
 
   &--index {
-    min-height: 256px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: auto 100%;
+    }
+
+    min-height: 320px;
+    background-image: url("../img/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center 80px;
 
     @media (min-width: @tablet-width) {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+        background-size: auto 100%;
+      }
+
+      background-image: url("../img/hero-tablet.jpg");
+      background-size: auto 100%;
+      min-height: 746px;
+    }
+
+    @media (min-width: @desktop-width) {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: auto 100%;
+      }
+
+      background-image: url("../img/hero-desktop.jpg");
+      background-size: auto 100%;
       min-height: 746px;
     }
   }
@@ -100,6 +125,19 @@
 .main-nav--opened {
   position: absolute;
   z-index: 2;
+}
+
+.page-header__logo-link {
+  outline: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 .page-header__logo-wrapper {
@@ -190,6 +228,14 @@
 }
 
 .main-nav__item {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @header-border;
+
+    &:first-child {
+      border-top: 1px solid @header-border;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
@@ -224,10 +270,6 @@
   &:active,
   &:focus {
     opacity: 30%;
-  }
-
-  @media (max-width: @mobile-width-only) {
-    border-bottom: 1px solid @header-border;
   }
 
   @media (min-width: @tablet-width) {
@@ -288,6 +330,10 @@
 }
 
 .main-nav__user-item {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @header-border;
+  }
+
   @media (min-width: @tablet-width) {
     height: 88px;
     display: flex;
