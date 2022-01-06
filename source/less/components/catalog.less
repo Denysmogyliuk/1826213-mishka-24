@@ -11,6 +11,8 @@
 }
 
 .catalog__list {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
@@ -19,7 +21,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: @desktop-inner-width;
-    grid-gap: 20px;
+    grid-gap: 0 50px;
   }
 }
 
@@ -28,11 +30,13 @@
   flex-direction: column;
   margin: 0 auto;
   margin-bottom: 30px;
-  width: 84%;
+  width: 81%;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 87%;
+    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -51,21 +55,23 @@
 
 
 .catalog__description-wrapper {
-  padding: 27px;
+  padding: 28px 27px 26px 27px;
   display: flex;
   flex-direction: column;
   border: 1px solid @grey;
   border-top: none;
 
   @media (min-width: @tablet-width) {
+    padding: 28px 27px 23px 33px;
     border: 1px solid @grey;
     border-left: none;
   }
 
   @media (min-width: @desktop-width) {
+    height: 100%;
+    padding: 28px 28px 23px 28px;
     border: 1px solid @grey;
     border-top: none;
-    height: 100%;
   }
 }
 
@@ -73,7 +79,17 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
-  margin-bottom: 6px;
+  margin: 0;
+  margin-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 89%;
+  }
 }
 
 .catalog__link {
@@ -88,6 +104,15 @@
   color: @semi-black;
   margin: 0;
   margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 13px;
+  }
 }
 
 .catalog__price-bucket-wrapper {
@@ -103,12 +128,22 @@
   font-size: 15px;
   line-height: 24px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .catalog__bucket-button {
+  width: 24px;
+  height: 18px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 8px;
+  }
 }
 
 .catalog__image {
