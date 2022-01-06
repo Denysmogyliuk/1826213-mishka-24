@@ -2,13 +2,13 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-top: 50px;
+    padding-top: 42px;
 
     &::before {
       z-index: 1;
       content: "";
       background-image: url("../img/zigzag-fill-tablet.svg");
-      background-position: center;
+      background-position-x: center;
       background-repeat: repeat-x;
       position: absolute;
       width: 100%;
@@ -18,11 +18,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 54px;
+
     &::before {
       z-index: 1;
       content: "";
       background-image: url("../img/zigzag-fill-desktop.svg");
-      background-position: center;
       background-repeat: repeat-x;
       position: absolute;
       width: 100%;

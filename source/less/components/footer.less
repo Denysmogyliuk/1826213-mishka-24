@@ -1,4 +1,6 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
   background-color: @grey;
   width: 100%;
 }
@@ -8,13 +10,14 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  max-width: @mobile-inner-width;
+  width: 81%;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     max-width: @tablet-inner-width;
     min-height: 143px;
+    width: 87%;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,8 +27,23 @@
 
 .socials {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
+  margin: 0;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 22px;
   list-style-type: none;
+
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @header-border;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    max-width: 40%;
+  }
 }
 
 .footer-logo {
@@ -36,14 +54,37 @@
   }
 }
 
-.copyright {
-  display: flex;
-  align-items: center;
+.footer-logo__image {
+  fill: @black;
+}
+
+.footer-logo__link {
+  display: block;
+  outline: none;
+
+  &:hover .footer-logo__image {
+    fill: @socials-color-hover;
+  }
+
+  &:active .footer-logo__image,
+  &:focus .footer-logo__image {
+    opacity: 30%;
+  }
 }
 
 .socials__link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  outline: none;
+
   &:hover .socials__link-logo {
     fill: @socials-color-hover;
+  }
+
+  &:active .socials__link-logo,
+  &:focus .socials__link-logo {
+    opacity: 30%;
   }
 }
 
@@ -51,27 +92,51 @@
   fill: @socials-color;
 }
 
-.footer-logo__image {
-  &:hover {
-    opacity: 40%;
+.copyright {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 6px;
+    max-width: 30%;
   }
 }
 
-
-.copyright__description {
-  margin-right: 30px;
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: 700;
-}
-
-.copyright__link-image {
+.copyright__image {
+  display: block;
   fill: @copyright-image-color;
 
   &:hover {
     fill: @copyright-image-color-hover;
   }
 }
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+
+  &:active,
+  &:focus {
+    opacity: 30%;
+  }
+}
+
+.copyright__description {
+  margin-right: 30px;
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 26px;
+  }
+}
+
 
 .socials__item:not(:last-child) {
   margin-right: 41px;
