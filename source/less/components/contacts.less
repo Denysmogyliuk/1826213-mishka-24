@@ -131,6 +131,15 @@
   color: @semi-black;
   border-bottom: 1px solid @green;
 
+  &:hover {
+    color: @email-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: @email-border-active;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 30px;

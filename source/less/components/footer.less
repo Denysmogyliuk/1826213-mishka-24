@@ -15,18 +15,18 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    max-width: @tablet-inner-width;
     min-height: 143px;
     width: 87%;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: @desktop-inner-width;
+    width: @desktop-inner-width;
   }
 }
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -42,7 +42,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    max-width: 40%;
+    max-width: 25%;
   }
 }
 
