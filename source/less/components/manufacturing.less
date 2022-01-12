@@ -39,22 +39,6 @@
   margin-top: 22px;
   margin-bottom: 27px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/icons/video-header.svg");
-    width: 32px;
-    height: 22px;
-    left: -58px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @media (min-width: @tablet-width) {
-      left: -64px;
-      top: 40%;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     order: 2;
     margin-top: 40px;
@@ -77,6 +61,26 @@
       top: -38px;
       transform: translateY(-50%);
     }
+  }
+}
+
+.manufacturing__header-icon {
+  position: absolute;
+  width: 32px;
+  height: 22px;
+  left: -58px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (min-width: @tablet-width) {
+    left: -64px;
+    top: 40%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+    top: -38px;
+    transform: translateY(-50%);
   }
 }
 

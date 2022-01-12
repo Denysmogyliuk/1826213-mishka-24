@@ -96,6 +96,15 @@
   display: block;
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 30%;
+  }
 }
 
 .catalog__product-description {
@@ -134,12 +143,25 @@
   }
 }
 
+.catalog__bucket-button-logo {
+  fill: @catalog-icon-button;
+}
+
 .catalog__bucket-button {
   width: 24px;
   height: 18px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover .catalog__bucket-button-logo {
+    fill: @catalog-icon-hover;
+  }
+
+  &:active .catalog__bucket-button-logo,
+  &:focus .catalog__bucket-button-logo {
+    fill: @catalog-icon-active;
+  }
 
   @media (min-width: @tablet-width) {
     margin-right: 8px;

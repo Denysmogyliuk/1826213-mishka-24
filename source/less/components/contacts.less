@@ -61,18 +61,6 @@
     font-size: 43px;
     line-height: 50px;
     font-weight: 700;
-
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 47px;
-      height: 81px;
-      right: 3px;
-      transform: translateY(-24px);
-      background-repeat: no-repeat;
-      background-image: url("../img/icons/contacts-flag.svg");
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -86,11 +74,23 @@
     font-size: 53px;
     line-height: 57px;
     font-weight: 700;
+  }
+}
 
-    &::before {
-      left: -112px;
-      top: 4px;
-    }
+.contacts__header-icon {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 3px;
+    transform: translateY(-24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -112px;
+    top: 4px;
   }
 }
 
