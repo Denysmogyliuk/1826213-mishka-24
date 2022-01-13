@@ -10,6 +10,7 @@ import csso from 'gulp-csso';
 import svgstore from 'gulp-svgstore';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -34,6 +35,7 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
