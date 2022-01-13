@@ -4,17 +4,20 @@
   flex-direction: column;
   margin: 0 auto;
   margin-bottom: 40px;
-  padding-top: 38px;
+  padding-top: 8px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 60px;
+    padding-top: 88px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 52px;
     max-width: @desktop-inner-width;
-    padding-top: 80px;
+    padding-top: 96px;
+    margin-bottom: 104px;
   }
 
   &::before {
@@ -45,89 +48,138 @@
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
-  width: 84%;
+  width: 81%;
   margin: 0 auto;
   margin-top: 38px;
-  margin-bottom: 28px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    width: 84%;
+    width: 87%;
     margin: 0 auto;
     margin-bottom: 49px;
     align-items: flex-start;
     font-size: 43px;
     line-height: 50px;
     font-weight: 700;
-
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 47px;
-      height: 81px;
-      right: 0;
-      background-repeat: no-repeat;
-      background-image: url("../img/icons/contacts-flag.svg");
-    }
   }
 
   @media (min-width: @desktop-width) {
+    width: 340px;
     margin: 0;
     margin-top: 80px;
-    margin-left: 25%;
+    margin-left: 174px;
     grid-column: 1/2;
     grid-row: 1/2;
+    align-self: start;
     font-size: 53px;
     line-height: 57px;
     font-weight: 700;
+  }
+}
 
-    &::before {
-      left: -80px;
-    }
+.contacts__header-icon {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 3px;
+    transform: translateY(-24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -112px;
+    top: 4px;
   }
 }
 
 .contacts__address-mail {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 20px 0;
-  width: 84%;
+  grid-template-columns: 1fr 2.3fr;
+  grid-gap: 34px 0;
+  width: 81%;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-columns: 1fr 3.3fr 1fr 3.3fr;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
+    width: 87%;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 78px 1fr;
     grid-column: 1/2;
     grid-row: 2/3;
-    margin-bottom: 0;
-    margin-left: 25%;
+    grid-gap: 28px 0;
+    align-self: flex-start;
+    width: 340px;
+    margin-bottom: 10px;
+    margin-left: 174px;
+    margin-top: 8px;
   }
 }
 
 .contacts__email {
   justify-self: flex-start;
   text-decoration: none;
-  color: inherit;
   align-self: flex-start;
+  font-size: 14px;
+  line-height: 20px;
+  color: @semi-black;
   border-bottom: 1px solid @green;
+
+  &:hover {
+    color: @email-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: @email-border-active;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__mail-name {
   margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: @semi-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__address-name {
   margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+  color: @semi-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__address {
+  font-size: 14px;
+  line-height: 30px;
+  color: @semi-black;
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__button {
@@ -135,6 +187,7 @@
   text-align: center;
   padding: 14px;
   background-color: @white;
+  font-family: inherit;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
@@ -142,7 +195,7 @@
   outline: 0;
   border: 2px solid @semi-black;
   cursor: pointer;
-  width: 84%;
+  width: 81%;
   margin: 0 auto;
 
   &:hover {
@@ -158,11 +211,12 @@
 
   @media (min-width: @tablet-width) {
     width: 230px;
+    font-size: 17px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
-    margin-left: 25%;
+    margin-left: 174px;
     align-self: flex-end;
   }
 }
@@ -175,6 +229,7 @@
 
   @media (min-width: @tablet-width) {
     height: 457px;
+    margin-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {

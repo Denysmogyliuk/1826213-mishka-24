@@ -1,5 +1,4 @@
 .page-header {
-  background: linear-gradient(@white 1px, @white 79px, @header-border 79px, @header-border 80px, transparent 80px);
   background-repeat: no-repeat;
   background-color: @main-header-background;
   background-size: 100% 80px;
@@ -21,37 +20,38 @@
   flex-direction: column;
 
   &--index {
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/hero-mobile@2x.jpg");
-      background-size: auto 100%;
-    }
-
-    min-height: 320px;
+    min-height: 362px;
     background-image: url("../img/hero-mobile.jpg");
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: center 80px;
+    background-position: center 62px;
+    background-size: auto 103%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+    }
 
     @media (min-width: @tablet-width) {
+      min-height: 692px;
+      background-image: url("../img/hero-tablet.jpg");
+      background-position: center -64px;
+      background-size: auto 107%;
+
       @media (min-resolution: 2dppx) {
         background-image: url("../img/hero-tablet@2x.jpg");
-        background-size: auto 100%;
+        background-position: center -64px;
       }
-
-      background-image: url("../img/hero-tablet.jpg");
-      background-size: auto 100%;
-      min-height: 746px;
     }
 
     @media (min-width: @desktop-width) {
       @media (min-resolution: 2dppx) {
         background-image: url("../img/hero-desktop@2x.jpg");
-        background-size: auto 100%;
+        background-position: center -64px;
+        min-height: 698px;
       }
 
       background-image: url("../img/hero-desktop.jpg");
-      background-size: auto 100%;
-      min-height: 746px;
+      background-position: center -64px;
+      min-height: 698px;
     }
   }
 
@@ -60,7 +60,11 @@
     min-height: 256px;
 
     @media (min-width: @tablet-width) {
-      min-height: 226px;
+      min-height: 172px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 204px;
     }
   }
 }
@@ -70,23 +74,33 @@
   font-weight: 700;
   line-height: 30px;
   display: block;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
-  padding-top: 155px;
+  padding-top: 152px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     font-weight: 700;
     line-height: 50px;
-    width: 50%;
-    padding-top: 50px;
+    width: 70%;
+    padding-top: 38px;
+
+    &--index {
+      padding-top: 92px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     font-weight: 700;
     line-height: 57px;
+    max-width: 620px;
+    padding-top: 36px;
+
+    &--index {
+      padding-top: 92px;
+    }
   }
 }
 
@@ -104,8 +118,8 @@
   @media (min-width: @tablet-width) {
     display: grid;
     width: 87%;
-    grid-template-columns: 1fr 1.2fr;
-    grid-template-rows: minmax(88px, min-content) minmax(70px, min-content);
+    grid-template-columns: 1fr 1.08fr;
+    grid-template-rows: minmax(88px, min-content) minmax(64px, min-content);
   }
 
   @media (min-width: @desktop-width) {
@@ -149,6 +163,7 @@
   @media (min-width: @desktop-width) {
     grid-column: 2/3;
     grid-row: 1/2;
+    justify-self: center;
   }
 }
 
@@ -176,6 +191,12 @@
   position: relative;
 }
 
+.main-nav--closed {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @header-border;
+  }
+}
+
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
@@ -192,9 +213,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 9px;
-    left: 0;
-    width: 21px;
+    top: 8px;
+    left: -2px;
+    width: 26px;
     height: 2px;
     background-color: @black;
   }
@@ -214,6 +235,7 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
+    margin-right: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -223,7 +245,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 70px;
+    margin-right: 60px;
   }
 }
 
@@ -246,7 +268,7 @@
     height: 88px;
 
     &:first-child {
-      padding-right: 30px;
+      padding-right: 36px;
       border-right: 1px solid @header-border;
     }
   }
@@ -260,7 +282,7 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
-  padding: 20px 60px;
+  padding: 27px 30px 27px 78px;
   outline: none;
 
   &:hover {
@@ -275,13 +297,22 @@
   @media (min-width: @tablet-width) {
     font-size: 15px;
     padding: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
 
     &--bucket {
       font-size: 17px;
+      padding-left: 60px;
+    }
+
+    &--search {
+      padding: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 26px;
+    padding-bottom: 26px;
     font-size: 17px;
   }
 }
@@ -291,6 +322,7 @@
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
+  fill: @header-menu-icon;
 
   @media (min-width: @tablet-width) {
     left: 50%;
@@ -303,9 +335,10 @@
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
+  fill: @header-menu-icon;
 
   @media (min-width: @tablet-width) {
-    left: -40px;
+    left: 7px;
   }
 }
 
@@ -325,6 +358,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 86px;
     grid-column: 3/4;
   }
 }
@@ -351,6 +385,7 @@
     display: block;
     box-sizing: border-box;
     width: 82px;
+    height: 89px;
     position: relative;
 
     & span {
@@ -381,9 +416,9 @@
   }
 }
 
-.main-nav__promo-item:not(:first-child) {
-  @media (min-width: @desktop-width) {
-    margin-left: 20px;
+.main-nav__promo-item {
+  &:not(:last-child) {
+    margin-right: 62px;
   }
 }
 
@@ -405,6 +440,10 @@
   line-height: 24px;
   font-weight: 700;
 
+  &--delivery {
+    font-weight: 400;
+  }
+
   &:hover {
     opacity: 60%;
   }
@@ -416,20 +455,18 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-  }
-}
-
-.main-nav__promo-link--new,
-.main-nav__promo-link--sale {
-  @media (min-width: @tablet-width) {
-    display: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
-  @media (min-width: @desktop-width) {
-    display: block;
-  }
-}
+  &--new,
+  &--sale {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
 
-.main-nav__promo-link--delivery {
-  font-weight: 400;
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
 }
