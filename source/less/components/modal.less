@@ -1,10 +1,10 @@
 .modal {
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding: 28px 0;
   border: 1px solid @lightgrey;
   box-shadow: 0 5px 10px 0 rgba(198, 198, 198, 1);
-  max-width: 100%;
-  width: 100%;
-  padding: 28px 0;
 
   &::backdrop {
     position: fixed;
@@ -24,12 +24,12 @@
 
 .modal__header {
   width: 50%;
+  margin: 0 auto;
+  margin-bottom: 14px;
   text-align: center;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
-  margin: 0 auto;
-  margin-bottom: 14px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -52,39 +52,39 @@
 }
 
 .modal__form-group {
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0;
-  border: none;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 31px;
+  padding: 0;
+  border: none;
 }
 
 .modal__legend {
+  margin-bottom: 22px;
   text-align: center;
   font-size: 15px;
   line-height: 30px;
   color: @semi-black;
-  margin-bottom: 22px;
 }
 
 .modal__submit {
   display: inline-block;
-  text-align: center;
+  width: 100%;
+  margin: 0 auto;
   padding: 14px;
+  text-align: center;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
   outline: 0;
   border: 2px solid @semi-black;
-  cursor: pointer;
-  width: 100%;
-  margin: 0 auto;
   background-color: @lightgreen;
   color: @white;
   border-color: @lightgreen;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.7;

@@ -1,7 +1,7 @@
 .manufacturing {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   width: 81%;
   margin: 0 auto;
   margin-bottom: 58px;
@@ -31,13 +31,13 @@
 
 .manufacturing__header {
   position: relative;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
   margin-left: 90px;
   margin-right: 10px;
   margin-top: 22px;
   margin-bottom: 27px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
 
   @media (min-width: @tablet-width) {
     order: 2;
@@ -48,13 +48,13 @@
   }
 
   @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: flex-end;
+    width: 60%;
     margin-left: 79px;
     margin-bottom: 0;
     margin-top: 98px;
-    align-self: flex-end;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    width: 60%;
 
     &::before {
       left: 0;
@@ -66,27 +66,26 @@
 
 .manufacturing__header-icon {
   position: absolute;
+  top: 50%;
+  left: -58px;
+  transform: translateY(-50%);
   width: 32px;
   height: 22px;
-  left: -58px;
-  top: 50%;
-  transform: translateY(-50%);
 
   @media (min-width: @tablet-width) {
-    left: -64px;
     top: 40%;
+    left: -64px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 0;
     top: -38px;
+    left: 0;
     transform: translateY(-50%);
   }
 }
 
 .video {
   position: relative;
-  display: inline-block;
   margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
@@ -115,7 +114,7 @@
 
   &:hover {
     transform: translate(-50%, -50%) scale(1.2);
-    transition: 200ms;
+    transition: 300ms;
   }
 
   &:active {
@@ -125,12 +124,12 @@
 }
 
 .manufacturing__description {
-  font-size: 13px;
-  line-height: 24px;
-  color: @semi-black;
   width: 75%;
   margin: 0 auto;
   margin-bottom: 41px;
+  font-size: 13px;
+  line-height: 24px;
+  color: @semi-black;
 
   @media (min-width: @tablet-width) {
     order: 3;
@@ -142,8 +141,8 @@
   @media (min-width: @desktop-width) {
     grid-column: 2/3;
     grid-row: 2/3;
-    margin-left: 79px;
     margin-top: 28px;
+    margin-left: 79px;
     margin-bottom: 0;
     width: 70%;
     font-size: 15px;
@@ -156,8 +155,8 @@
   box-sizing: border-box;
   width: 75%;
   margin: 0 auto;
-  padding: 14px;
   margin-bottom: 33px;
+  padding: 14px;
   background-color: @white;
   text-decoration: none;
   color: inherit;
@@ -191,10 +190,10 @@
   @media (min-width: @desktop-width) {
     grid-column: 2/3;
     grid-row: 3/4;
+    justify-self: flex-start;
+    align-self: end;
     width: 230px;
     margin-left: 79px;
     margin-bottom: 58px;
-    justify-self: flex-start;
-    align-self: end;
   }
 }
