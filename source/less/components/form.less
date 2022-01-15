@@ -13,7 +13,6 @@
 .form__description-container {
   display: flex;
   width: 81%;
-  max-width: @desktop-inner-width;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -53,7 +52,6 @@
   display: flex;
   flex-direction: column;
 
-
   @media (min-width: @tablet-width) {
     padding-top: 32px;
     padding-bottom: 50px;
@@ -79,11 +77,11 @@
 .form-field {
   position: relative;
   display: grid;
-  padding: 0;
   grid-column: 1fr 2fr;
-  border: none;
   width: 81%;
   margin: 0 auto;
+  padding: 0;
+  border: none;
 
   @media (max-width: @mobile-width-only) {
     border-top: 1px solid @green;
@@ -101,9 +99,9 @@
 .form-field__filter-list {
   display: flex;
   flex-direction: column;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 
   &--type {
     margin-bottom: 24px;
@@ -174,17 +172,17 @@
 .form-field__user-list {
   display: flex;
   flex-direction: column;
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 
   @media (min-width: @tablet-width) {
     margin-left: 25%;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 174px;
     width: 700px;
+    margin-left: 174px;
   }
 }
 
@@ -237,8 +235,8 @@
 
 .form-field__label {
   display: flex;
-  min-height: 52px;
   align-items: center;
+  min-height: 52px;
   cursor: pointer;
 }
 
@@ -249,8 +247,8 @@
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
     padding-left: 80px;
+    font-size: 19px;
   }
 }
 
@@ -303,11 +301,11 @@
   &::before {
     content: "";
     position: absolute;
-    border-radius: 50%;
     top: 13px;
     left: 13px;
     height: 20px;
     width: 20px;
+    border-radius: 50%;
     background-color: @green;
 
     @media (max-width: @mobile-width-only) {
@@ -325,10 +323,10 @@
     position: absolute;
     top: 30px;
     left: 6px;
+    transform: rotate(45deg);
     width: 16px;
     height: 2px;
     background-color: @black;
-    transform: rotate(45deg);
 
     @media (max-width: @mobile-width-only) {
       top: 22px;
@@ -343,10 +341,10 @@
     position: absolute;
     top: 24px;
     left: 14px;
+    transform: rotate(-45deg);
     width: 32px;
     height: 2px;
     background-color: @black;
-    transform: rotate(-45deg);
 
     @media (max-width: @mobile-width-only) {
       top: 18px;
@@ -358,10 +356,10 @@
 }
 
 .form-field__user-item {
-  margin-bottom: 22px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 22px;
 
   &:first-child {
     margin-top: 28px;
@@ -369,8 +367,8 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    margin-bottom: 20px;
     align-items: baseline;
+    margin-bottom: 20px;
 
     &:first-child {
       margin-top: 15px;
@@ -379,15 +377,15 @@
 }
 
 .form-field__input {
+  flex-grow: 1;
   padding: 16px 0;
   font-size: 17px;
   line-height: 18px;
   color: @semi-black;
+  background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 2px solid @black;
-  flex-grow: 1;
-  background-color: transparent;
+  border-bottom: 2px solid @semi-black;
 
   &::placeholder {
     color: @form-placeholder;
@@ -411,8 +409,8 @@
   font-weight: 700;
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
     margin-right: 24px;
+    font-size: 19px;
   }
 }
 
@@ -420,11 +418,10 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  list-style-type: none;
+  width: 81%;
   margin: 0 auto;
   padding: 0;
-  width: 81%;
-  max-width: @desktop-inner-width;
+  list-style-type: none;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
@@ -509,7 +506,6 @@
 
 .form__textarea-wrapper {
   width: 81%;
-  max-width: @desktop-inner-width;
   margin: 40px auto 56px;
   display: flex;
   flex-direction: column;
@@ -526,18 +522,19 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
+    max-width: @desktop-inner-width;
   }
 }
 
 .form-field__textarea {
+  box-sizing: border-box;
   padding: 15px;
+  margin-bottom: 15px;
   font-family: inherit;
   font-size: 17px;
   line-height: 18px;
   outline: none;
-  border: 2px solid @black;
-  box-sizing: border-box;
-  margin-bottom: 15px;
+  border: 2px solid @semi-black;
   resize: none;
 
   &:hover,
@@ -568,12 +565,11 @@
 
 .form-field__title--textarea {
   @media (max-width: @mobile-width-only) {
-    display: inline-block;
-    background-color: @white;
     position: relative;
-    top: -9px;
     align-self: flex-start;
+    top: -9px;
     margin-bottom: 16px;
+    background-color: @white;
   }
 
   @media (min-width: @tablet-width) {
@@ -582,17 +578,18 @@
 }
 
 .order-form__submit {
-  display: inline-block;
-  text-align: center;
+  width: 100%;
   padding: 16px;
+  text-align: center;
   background-color: @white;
+  text-transform: uppercase;
+  font-family: inherit;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
-  text-transform: uppercase;
+  color: @semi-black;
   outline: 0;
   border: 2px solid @semi-black;
-  width: 100%;
   cursor: pointer;
 
   &:hover {

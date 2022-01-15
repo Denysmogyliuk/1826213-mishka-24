@@ -45,13 +45,13 @@
 .contacts__header {
   position: relative;
   display: block;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
   width: 81%;
   margin: 0 auto;
   margin-top: 38px;
   margin-bottom: 33px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
 
   @media (min-width: @tablet-width) {
     width: 87%;
@@ -64,13 +64,13 @@
   }
 
   @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: start;
     width: 340px;
     margin: 0;
     margin-top: 80px;
     margin-left: 174px;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    align-self: start;
     font-size: 53px;
     line-height: 57px;
     font-weight: 700;
@@ -124,12 +124,12 @@
 
 .contacts__email {
   justify-self: flex-start;
-  text-decoration: none;
   align-self: flex-start;
   font-size: 14px;
   line-height: 20px;
   color: @semi-black;
   border-bottom: 1px solid @green;
+  text-decoration: none;
 
   &:hover {
     color: @email-hover;
@@ -171,10 +171,10 @@
 }
 
 .contacts__address {
+  font-style: normal;
   font-size: 14px;
   line-height: 30px;
   color: @semi-black;
-  font-style: normal;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
@@ -184,19 +184,20 @@
 
 .contacts__button {
   display: block;
-  text-align: center;
   padding: 14px;
+  width: 81%;
+  margin: 0 auto;
   background-color: @white;
   font-family: inherit;
+  text-align: center;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
+  color: @semi-black;
   text-transform: uppercase;
   outline: 0;
   border: 2px solid @semi-black;
   cursor: pointer;
-  width: 81%;
-  margin: 0 auto;
 
   &:hover {
     background-color: @semi-black;
@@ -216,8 +217,8 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
-    margin-left: 174px;
     align-self: flex-end;
+    margin-left: 174px;
   }
 }
 
