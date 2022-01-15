@@ -12,31 +12,3 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
-
-const STATES = {
-  OPENED: "opened",
-  CLOSED: "closed"
-};
-
-const openDialogButton = document.querySelector('.popular-product__order-button, .catalog__bucket-button');
-const dialog = document.querySelector('.modal');
-
-openDialogButton.addEventListener('click', () => {
-  dialog.setAttribute("data-state", STATES.OPENED);
-  dialog.showModal();
-
-  dialog.addEventListener("click", (e) => {
-    const { target, clientX, clientY } = e;
-
-    const rect = target.getBoundingClientRect();
-    const minX = rect.left + target.clientLeft;
-    const minY = rect.top + target.clientTop;
-    const isClickedOutsideByWidth = clientX < minX || clientX >= minX + target.clientWidth;
-    const isClickedOutsideByHeight = clientY < minY || clientY >= minY + target.clientHeight;
-
-    if ( isClickedOutsideByWidth || isClickedOutsideByHeight) {
-      target.close();
-      dialog.setAttribute("data-state", STATES.CLOSED)
-    }
-  })
-})
