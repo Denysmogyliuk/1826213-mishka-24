@@ -26,10 +26,12 @@ if (document.querySelector(".modal__wrapper")) {
       modalOverlay.classList.add("modal__wrapper--open");
       modalCart.classList.add("modal--open");
       document.body.style.overflow = "hidden";
+      document.body.style.padding = "0 15px 0 0";
       if (modalCart.classList.contains("modal--open")) {
         window.addEventListener("click", function (e) {
           if (e.target === modalOverlay) {
             document.body.style.overflow = "visible";
+            document.body.style.padding = "0";
             modalOverlay.classList.remove("modal__wrapper--open");
             modalCart.classList.remove("modal--open");
           }
