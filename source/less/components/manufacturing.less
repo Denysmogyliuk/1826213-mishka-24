@@ -25,7 +25,7 @@
     grid-template-columns: 683px 1fr;
     grid-template-rows: min-content 1fr min-content;
     width: @desktop-inner-width;
-    margin-bottom: 106px;
+    margin-bottom: 102px;
   }
 }
 
@@ -101,6 +101,12 @@
 .video__image {
   width: 100%;
   height: auto;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .video__button {
@@ -143,7 +149,7 @@
     grid-row: 2/3;
     margin-top: 28px;
     margin-left: 79px;
-    margin-bottom: 0;
+    margin-bottom: 16px;
     width: 70%;
     font-size: 15px;
     line-height: 30px;

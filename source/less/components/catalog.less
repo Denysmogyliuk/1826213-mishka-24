@@ -36,12 +36,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 87%;
-    margin-bottom: 56px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     width: 100%;
+    margin-bottom: 58px;
   }
 }
 
@@ -85,10 +86,11 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 24px;
+    max-width: 86%;
   }
 
   @media (min-width: @desktop-width) {
-    width: 89%;
+    max-width: 89%;
   }
 }
 
@@ -106,6 +108,12 @@
     opacity: 30%;
   }
 }
+
+.catalog__image {
+  width: 100%;
+  height: auto;
+}
+
 
 .catalog__product-description {
   margin: 0;
@@ -163,9 +171,4 @@
   &:focus .catalog__bucket-button-logo {
     fill: @catalog-icon-active;
   }
-}
-
-.catalog__image {
-  width: 400px;
-  height: 500px;
 }
