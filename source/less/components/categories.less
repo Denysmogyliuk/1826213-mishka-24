@@ -16,13 +16,22 @@
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap-reverse;
     width: 87%;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-inner-width;
+  }
+}
+
+.categories__item {
+  @media (min-width: @tablet-width) {
+    max-width: 50%;
+    min-width: 33%;
+    flex-grow: 1;
   }
 }
 
