@@ -84,51 +84,6 @@
   }
 }
 
-.video {
-  position: relative;
-  margin-bottom: 35px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-column: 1/2;
-    grid-row: 1/4;
-  }
-}
-
-.video__image {
-  width: 100%;
-  height: auto;
-
-  @media (min-width: @desktop-width) {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.video__button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    transform: translate(-50%, -50%) scale(1.2);
-    transition: 300ms;
-  }
-
-  &:active {
-    transform: translate(-50%, -50%) scale(0.8);
-    opacity: 0.3;
-  }
-}
-
 .manufacturing__description {
   width: 75%;
   margin: 0 auto;
