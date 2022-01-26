@@ -29,7 +29,36 @@
       height: 34px;
       content: "";
       background-image: url("../img/zigzag-fill-desktop.svg");
+      background-position-x: center;
       background-repeat: repeat-x;
+    }
+
+    &--index::before {
+      background-image: url("../img/zigzag-fill-desktop-index.svg");
+    }
+  }
+
+  &--catalog {
+    padding-top: 30px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 67px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 111px;
+    }
+  }
+
+  &--form {
+    padding-top: 17px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 58px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 102px;
     }
   }
 }

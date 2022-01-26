@@ -1,0 +1,107 @@
+.page-header {
+  background-position: top center;
+  background-size: 100% 80px;
+  background-repeat: no-repeat;
+  background-color: @main-header-background;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(@white 1px, @white 88px, @header-border 88px, @header-border 89px, transparent 89px);
+    background-color: @main-header-background;
+  }
+
+  &--catalog,
+  &--form {
+    background-color: @grey;
+  }
+}
+
+.page-header__title-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--index {
+    min-height: 362px;
+    background-image: url("../img/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center 62px;
+    background-size: auto 103%;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+    }
+
+    @media (min-width: @tablet-width) {
+      min-height: 692px;
+      background-image: url("../img/hero-tablet.jpg");
+      background-position: center -64px;
+      background-size: auto 107%;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+        background-position: center -64px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 698px;
+      background-image: url("../img/hero-desktop.jpg");
+      background-position: center -64px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        min-height: 698px;
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-position: center -64px;
+      }
+    }
+  }
+
+  &--form,
+  &--catalog {
+    min-height: 256px;
+
+    @media (min-width: @tablet-width) {
+      min-height: 172px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 204px;
+    }
+  }
+}
+
+.page-header__title {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 152px;
+  padding-bottom: 20px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 70%;
+    padding-top: 38px;
+    padding-bottom: 55px;
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: 700;
+
+    &--index {
+      padding-top: 92px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 620px;
+    padding-top: 36px;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
+
+    &--index {
+      padding-top: 92px;
+    }
+  }
+}
