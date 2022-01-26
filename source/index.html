@@ -229,7 +229,7 @@
         </address>
       </div>
       <div class="contacts__map-wrapper">
-        <div class="contacts__map">
+        <div class="contacts__map" id="map">
           <picture>
             <source type="image/webp" media="(min-width: 1150px)"
               srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
@@ -238,14 +238,9 @@
             <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map-image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x"
-              alt="Карта проезда">
+            <img class="contacts__map-image" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320"
+              height="454" alt="Карта проезда.">
           </picture>
-        </div>
-        <div class="contacts__google-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1639726910072!5m2!1sru!2sua"
-            width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
       <a class="contacts__button" href="#">Напишите нам</a>
@@ -327,6 +322,8 @@
   </section>
 
   <script src="./js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHP5LccUnGZtGvjbajSXjpCwFZFbKq_70&callback=initMap"
+    defer></script>
 
 </body>
 

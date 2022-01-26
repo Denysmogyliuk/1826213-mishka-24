@@ -47,8 +47,19 @@ if (document.querySelector('.modal')) {
 
 // Управление картой
 
-var mapPicture = document.querySelector('.contacts__map');
-var mapGoogle = document.querySelector('.contacts__google-map');
+function initMap() {
+  var coordinates = {lat: 59.938775, lng: 30.32305};
+  var markerImage = 'img/map-marker.svg';
+  var zoom = 17;
 
-mapPicture.classList.add('visually-hidden');
-mapGoogle.classList.remove('visually-hidden');
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: coordinates,
+      zoom: zoom
+    });
+
+    marker = new google.maps.Marker({
+      position: coordinates,
+      map: map,
+      icon: markerImage
+    });
+}
